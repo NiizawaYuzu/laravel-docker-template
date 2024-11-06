@@ -5,13 +5,13 @@ use Illuminate\Database\Seeder;
 class TodoSeeder extends Seeder
 {
     /**
-     * Run the database seeds.
+     * Run the database seeds
      *
      * @return void
      */
     public function run()
     {   
-        DB::table('todos')->truncate();
+        DB::table('todos')->truncate(); 
         
         $testData = [
             [
