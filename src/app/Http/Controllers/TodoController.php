@@ -8,11 +8,11 @@ use App\Todo;
 
 class TodoController extends Controller
 {   
-    private $todo; // 追記
+    private $todo; // 空のプロパティ todoモデルを使いまわしたい
 
     public function __construct(Todo $todo)
     {
-        $this->todo = $todo; // 追記
+        $this->todo = $todo; 
     }
     
     public function index()
@@ -32,7 +32,6 @@ class TodoController extends Controller
     public function store(TodoRequest $request) 
     {
         $inputs = $request->all(); // 変更
-        dd($inputs);
 
         // $todo = new Todo();
         // $todo->fill($inputs);
